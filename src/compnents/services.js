@@ -1,8 +1,11 @@
 import React from 'react'
-
+import Layout from './layout'
+import Footer from './footer'
 const Services = () => {
   return (
-    // <!-- services -->
+    <>
+    <Layout/>
+    {/* // <!-- services --> */}
     <div class="w3pvtits-services py-5" id="services">
         <div class="container py-xl-5 py-lg-3">
             <h3 class="title-w3 mb-2 text-center text-wh font-weight-bold">We Provide The <span>Best Services</span>
@@ -46,9 +49,11 @@ const Services = () => {
         </div>
         <img src="images/img.png" alt="services" class="img-fluid img-posi-w3pvt" />
     </div>
-    // <!-- //services -->
-
+    {/* // <!-- //services --> */}
+    <Footer/>
+</>
   )
+  
 }
 
 export default Services

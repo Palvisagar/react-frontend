@@ -1,6 +1,5 @@
 import React from 'react'
-import { Link, Outlet } from 'react-router-dom';
-import Footer from './footer';
+import {Link, Outlet } from 'react-router-dom';
 function Layout() {
   return (
     // <!-- header -->
@@ -19,7 +18,7 @@ function Layout() {
                         <label for="drop" className="toggle">Menu</label>
                         <input type="checkbox" id="drop" />
                         <ul className="menu">
-                            <li><a href="index.html">Home</a></li>
+                            <li><Link to="/property">Home</Link></li>
                             <li><Link to="/property">Find a Property</Link></li>
                             <li>
                                 {/* <!-- First Tier Drop Down --> */}
@@ -30,7 +29,7 @@ function Layout() {
                                 <input type="checkbox" id="drop-2" />
                                 <ul>
                                     <li><Link className="drop-text" to="/pages/about">About Us</Link></li>
-                                    <li><Link to="/services" className="drop-text">Services</Link></li>
+                                    <li><Link to="pages/services" className="drop-text">Services</Link></li>
                                     <li><Link to="/gallery" className="drop-text">Gallery</Link></li>
                                 </ul>
                             </li>
@@ -45,12 +44,7 @@ function Layout() {
             </div>
         </div>
     </header>
-    <section class="contact py-5" id="contact">
-
-    </section>
-    {/* // <!-- //header --> */}
-    <Footer/>   
-    <Outlet></Outlet> 
+   <Outlet></Outlet>
     </>
   )
 }
